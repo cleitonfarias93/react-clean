@@ -1,53 +1,10 @@
-$white: #fff;
-$black: #000;
-$background: #f2f2f2;
-$primary: #880e4f;
-$primaryDark: #560027;
-$primaryLight: #bc477b;
-
-* {
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: $background;
-}
-
-input[type="password"],
-input[type="email"] {
-  border: 1px solid $primaryLight;
-  line-height: 40px;
-  border-radius: 4px;
-  padding: 0px 40px 0px 8px;
-
-  &:focus {
-    outline-color: $primaryLight;
-  }
-}
-
-button {
-  background-color: $primary;
-  color: white;
-  border-radius: 8px;
-  font-size: 16px;
-  border: none;
-  line-height: 60px;
-
-  &:hover {
-    opacity: 0.9;
-  }
-}
+@import "../../styles/colors.scss";
 
 .login {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100vh;
-
+  justify-content: space-between;
 
   .form {
     display: flex;
@@ -66,24 +23,6 @@ button {
       text-transform: uppercase;
     }
 
-    .inputWrap {
-      margin-top: 16px;
-      display: flex;
-      align-items: center;
-      position: relative;
-
-      input {
-        flex-grow: 1;
-      }
-
-      .status {
-        position: absolute;
-        right: 8px;
-        font-size: 12px;
-        cursor: help;
-      }
-    }
-
     .submit {
       margin-top: 32px;
     }
@@ -91,7 +30,7 @@ button {
     .link {
       text-align: center;
       color: $primary;
-      text-transform: 16px;
+      text-transform: lowercase;
       margin-top: 16px;
       cursor: pointer;
 
@@ -99,26 +38,5 @@ button {
         text-decoration: underline;
       }
     }
-
-    .errorWrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      .error {
-        margin-top: 16px;
-      }
-
-      .loading {
-        margin-top: 16px;
-      }
-    }
-    
-  }
-
-  .footer {
-    background-color: $primary;
-    height: 48px;
   }
 }
